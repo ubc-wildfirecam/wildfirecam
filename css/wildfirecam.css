@@ -417,19 +417,17 @@ body.wildfirecam h4 {
 .wfc-stats__bar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: var(--ubc-blue);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: var(--radius-xl);
-    padding: 32px 0;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+    padding: 36px 0;
+    box-shadow: 0 8px 40px rgba(0,33,69,0.4);
 }
 
 .wfc-stat {
     text-align: center;
     padding: 0 20px;
-    border-right: 1px solid rgba(255,255,255,0.08);
+    border-right: 1px solid rgba(255,255,255,0.15);
 }
 
 .wfc-stat:last-child {
@@ -444,13 +442,14 @@ body.wildfirecam h4 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .wfc-stat__label {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: #ffffff;
     font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 /* ---------- Quote Section ---------- */
