@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7 oldie" lang="en-ca"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="ie7 oldie" lang="en-ca"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="ie8 oldie" lang="en-ca"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]><html class="ie9" lang="en-ca"><![endif]-->
+<!--[[if (gt IE 9)|(gt IEMobile 7)]><!--><html lang="en-ca"><!--<![endif]-->
+<!--
+ * UBC CLF (Common Look and Feel) v7.0.5.1
+ * Copyright 2012-2021 The University of British Columbia
+ * UBC Communications
+ * https://brand.ubc.ca/clf
+ */
+-->
+<head>
+<meta charset="utf-8">
+<title>UBC WildfireCam Network | Wildfire Monitoring Research Initiative</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The UBC WildfireCam Network is a collaborative wildfire monitoring research initiative led by UBCO in partnership with the BC Wildfire Service. Enhancing detection, monitoring, and community preparedness across British Columbia.">
+<meta name="author" content="UBC Okanagan — Fire Ecology and Remote Sensing Lab">
+<meta name="keywords" content="UBC, WildfireCam, wildfire monitoring, BC Wildfire Service, UBCO, fire detection, camera network, British Columbia">
+
+<!-- Open Graph -->
+<meta property="og:title" content="UBC WildfireCam Network">
+<meta property="og:description" content="A collaborative research project between UBC and the BC Wildfire Service to enhance detection, monitoring, and community preparedness.">
+<meta property="og:type" content="website">
+
+<!-- Stylesheets -->
+<link href="//cdn.ubc.ca/clf/7.0.5/css/ubc-clf-full.min.css" rel="stylesheet">
+<link href="css/unit.css" rel="stylesheet">
+<link href="css/wildfirecam.css" rel="stylesheet">
+
+<!-- Font Awesome 6 (for better icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!--[if lte IE 7]>
+<link href="//cdn.ubc.ca/clf/7.0.5/css/font-awesome-ie7.css" rel="stylesheet">
+<![endif]-->
+<!--[if lt IE 9]>
+  <script src="//cdn.ubc.ca/clf/html5shiv.min.js"></script>
+<![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="//cdn.ubc.ca/clf/7.0.5/img/favicon.ico">
+<link rel="apple-touch-icon" href="//cdn.ubc.ca/clf/7.0.5/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="152x152" href="//cdn.ubc.ca/clf/7.0.5/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="//cdn.ubc.ca/clf/7.0.5/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="//cdn.ubc.ca/clf/7.0.5/img/touch-icon-ipad-retina.png">
+</head>
+<body class="full-width wildfirecam">
+    <!-- UBC Global Utility Menu -->
+    <div class="collapse expand" id="ubc7-global-menu">
+        <div id="ubc7-search" class="expand">
+            <div class="container">
+                <div id="ubc7-search-box">
+                    <form class="form-search" method="get" action="//www.ubc.ca/search/refine/" role="search">
+                        <input type="text" name="q" placeholder="Search this website" aria-label="Search this website" class="input-xlarge search-query">
+                        <input type="hidden" name="label" value="Search WildfireCam" />
+                        <input type="hidden" name="site" value="*.ubc.ca" />
+                        <button type="submit" class="btn">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="ubc7-global-header" class="expand">
+                <!-- Global Utility Header from CDN -->
+            </div>
+        </div>
+    </div>
+    <!-- End of UBC Global Utility Menu -->
+
+    <!-- UBC Header -->
+    <header id="ubc7-header" class="row-fluid expand">
+        <div class="container">
+            <div class="span1">
+                <div id="ubc7-logo" aria-label="university logo" role="navigation">
+                    <a href="//www.ubc.ca" title="The University of British Columbia (UBC)">The University of British Columbia</a>
+                </div>
+            </div>
+            <div class="span11" id="ubc7-wordmark-block">
+                <div id="ubc7-wordmark" aria-label="wordmark">
+                    <a href="//www.ubc.ca/okanagan" title="The University of British Columbia (UBC) Okanagan Campus">The University of British Columbia</a>
+                    <span class="ubc7-campus" id="ubc7-okanagan-campus">Okanagan Campus</span>
+                </div>
+                <div id="ubc7-global-utility">
+                    <button type="button" data-toggle="collapse" data-target="#ubc7-global-menu" aria-label="search trigger"><span>UBC Search</span></button>
+                    <noscript><a id="ubc7-global-utility-no-script" href="//www.ubc.ca/" title="UBC Search">UBC Search</a></noscript>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of UBC Header -->
+
+    <!-- UBC Unit Identifier -->
+    <div id="ubc7-unit" class="row-fluid expand">
+        <div class="container">
+            <div class="span12">
+                <!-- Mobile Menu Icon -->
+                <div class="navbar">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target="#ubc7-unit-navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div>
+                <div id="ubc7-unit-name">
+                    <a href="/" title="UBC WildfireCam Network"><span id="ubc7-unit-faculty">Irving K. Barber Faculty of Science</span><span id="ubc7-unit-identifier">WildfireCam Network</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of UBC Unit Identifier -->
+
+    <!-- UBC Unit Navigation -->
+    <div id="ubc7-unit-menu" class="navbar expand" role="navigation">
+        <div class="navbar-inner expand">
+            <div class="container">
+                <div class="nav-collapse collapse" id="ubc7-unit-navigation">
+                    <ul class="nav">
+                        <li class="active"><a href="#" title="Home">Home</a></li>
+                        <li><a href="#about" title="About">About</a></li>
+                        <li><a href="#benefits" title="Benefits">Benefits</a></li>
+                        <li><a href="#partners" title="Partners">Partners</a></li>
+                        <li><a href="#faq" title="FAQs">FAQs</a></li>
+                        <li><a href="#contact" title="Contact Us">Contact Us</a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div>
+        </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
+    <!-- End of UBC Unit Navigation -->
+
+    <div class="full-width-container">
+        <!-- Content Area -->
+        <div class="content expand" role="main">
+
+            <!-- ============ HERO SECTION ============ -->
+            <section class="wfc-hero" id="hero">
+                <div class="wfc-hero__bg">
+                    <img src="https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?w=1920&q=80" alt="BC wildfire landscape with smoke rising over forested mountains">
+                </div>
+                <div class="wfc-hero__overlay"></div>
+                <div class="wfc-hero__content">
+                    <div class="wfc-hero__badge">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                        UBC Research Initiative
+                    </div>
+                    <h1 class="wfc-hero__title">
+                        UBC <span>WildfireCam</span> Network
+                    </h1>
+                    <p class="wfc-hero__subtitle">
+                        A collaborative research project between UBC and the BC Wildfire Service to enhance detection, monitoring, and community preparedness across British Columbia.
+                    </p>
+                    <div class="wfc-hero__actions">
+                        <a href="#about" class="wfc-btn wfc-btn--primary" id="cta-learn-more">
+                            <i class="fa-solid fa-play"></i> Learn More
+                        </a>
+                        <a href="#contact" class="wfc-btn wfc-btn--outline" id="cta-get-involved">
+                            <i class="fa-solid fa-handshake"></i> Get Involved
+                        </a>
+                    </div>
+                </div>
+                <div class="wfc-hero__scroll">
+                    <span>Scroll</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </section>
+
+            <!-- ============ STATS BAR ============ -->
+            <section class="wfc-stats" aria-label="Key statistics">
+                <div class="wfc-container">
+                    <div class="wfc-stats__bar wfc-animate" id="stats-bar">
+                        <div class="wfc-stat">
+                            <div class="wfc-stat__number" data-count="24">0</div>
+                            <div class="wfc-stat__label">Cameras Deployed</div>
+                        </div>
+                        <div class="wfc-stat">
+                            <div class="wfc-stat__number" data-count="7">0</div>
+                            <div class="wfc-stat__label">Partner Agencies</div>
+                        </div>
+                        <div class="wfc-stat">
+                            <div class="wfc-stat__number">24/7</div>
+                            <div class="wfc-stat__label">Real-Time Monitoring</div>
+                        </div>
+                        <div class="wfc-stat">
+                            <div class="wfc-stat__number">1st</div>
+                            <div class="wfc-stat__label">In Canada — Publicly Accessible</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ ABOUT SECTION ============ -->
+            <section class="wfc-section wfc-section--light" id="about">
+                <div class="wfc-container">
+                    <div class="wfc-about__grid">
+                        <div class="wfc-about__image wfc-animate">
+                            <img src="https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=800&q=80" alt="Wildfire monitoring camera equipment overlooking a forested landscape in British Columbia">
+                        </div>
+                        <div class="wfc-about__text wfc-animate">
+                            <div class="wfc-section__label"><i class="fa-solid fa-circle-info"></i> About the Project</div>
+                            <h2 class="wfc-section__title">Protecting BC Through Innovation</h2>
+                            <p>The UBC WildfireCam Network is a collaborative wildfire monitoring research initiative led by the University of British Columbia Okanagan (UBCO) in partnership with the BC Wildfire Service (BCWS).</p>
+                            <p>The network blends advanced camera technology, real-time data analysis, and machine learning algorithms to support wildfire monitoring, improve situational awareness, and enhance emergency preparedness across the province.</p>
+                            <p>Integrated with BC Wildfire Service Operations, the provincial WildfireCam system ensures that all collaborating partners have access to the information they need to support decision-making and inter-agency cooperation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ BENEFITS SECTION ============ -->
+            <section class="wfc-section wfc-section--gradient" id="benefits">
+                <div class="wfc-container">
+                    <div class="wfc-section__header--center wfc-animate">
+                        <div class="wfc-section__label"><i class="fa-solid fa-shield-halved"></i> Key Benefits</div>
+                        <h2 class="wfc-section__title">Why WildfireCam Matters</h2>
+                        <p class="wfc-section__subtitle">The provincial camera network will be the first integrated and publicly accessible wildfire monitoring network in Canada.</p>
+                    </div>
+                    <div class="wfc-benefits__grid">
+                        <div class="wfc-benefit-card wfc-animate" id="benefit-awareness">
+                            <div class="wfc-benefit-card__icon">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="wfc-benefit-card__title">Enhanced Situational Awareness</h3>
+                            <p class="wfc-benefit-card__desc">Real-time visual intelligence for emergency responders and the public — empowering faster, more informed decisions when every second counts.</p>
+                        </div>
+                        <div class="wfc-benefit-card wfc-animate" id="benefit-monitoring">
+                            <div class="wfc-benefit-card__icon">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <h3 class="wfc-benefit-card__title">Consistent Detection & Monitoring</h3>
+                            <p class="wfc-benefit-card__desc">Continuous, real-time visual data capture day and night. Our cameras never sleep, providing unwavering vigilance across BC's landscapes.</p>
+                        </div>
+                        <div class="wfc-benefit-card wfc-animate" id="benefit-decision">
+                            <div class="wfc-benefit-card__icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="wfc-benefit-card__title">Better Decision Making</h3>
+                            <p class="wfc-benefit-card__desc">Well-informed and coordinated strategic response. Camera data enables wildfire services to deploy resources precisely where and when they're needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ QUOTE SECTION ============ -->
+            <section class="wfc-quote" id="quote">
+                <div class="wfc-container wfc-animate">
+                    <p class="wfc-quote__text">
+                        "With the support of our partners, we aim to deploy cameras across the province to support wildfire preparedness, response, and monitoring — creating a new standard for community safety in Canada."
+                    </p>
+                    <div class="wfc-quote__author">
+                        Dr. Mathieu Bourbonnais
+                        <span>Lead Researcher, Fire Ecology and Remote Sensing Lab — UBC Okanagan</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ PARTNERS SECTION ============ -->
+            <section class="wfc-section wfc-section--light" id="partners">
+                <div class="wfc-container">
+                    <div class="wfc-section__header--center wfc-animate">
+                        <div class="wfc-section__label"><i class="fa-solid fa-users"></i> Collaboration</div>
+                        <h2 class="wfc-section__title">Our Partners</h2>
+                        <p class="wfc-section__subtitle">The WildfireCam Network thrives through strong partnerships across government, academia, and local communities.</p>
+                    </div>
+                    <div class="wfc-partners__grid wfc-animate">
+                        <a href="https://www2.gov.bc.ca/gov/content/safety/wildfire-status" target="_blank" rel="noopener noreferrer" class="wfc-partner-card" id="partner-bcws" title="Visit BC Wildfire Service">
+                            <div class="wfc-partner-card__logo wfc-partner-card__logo--bcws">
+                                <i class="fa-solid fa-fire-flame-curved"></i>
+                            </div>
+                            <h3 class="wfc-partner-card__name">BC Wildfire Service</h3>
+                            <p class="wfc-partner-card__desc">Provincial wildfire management and coordination, integrating camera intelligence into operational response.</p>
+                        </a>
+                        <a href="https://ok.ubc.ca/" target="_blank" rel="noopener noreferrer" class="wfc-partner-card" id="partner-ubco" title="Visit UBC Okanagan">
+                            <div class="wfc-partner-card__logo wfc-partner-card__logo--ubco">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="wfc-partner-card__name">UBC Okanagan</h3>
+                            <p class="wfc-partner-card__desc">Leading research in fire ecology, remote sensing, and machine learning for smoke detection algorithms.</p>
+                        </a>
+                        <a href="https://www.kelowna.ca/" target="_blank" rel="noopener noreferrer" class="wfc-partner-card" id="partner-kelowna" title="Visit City of Kelowna">
+                            <div class="wfc-partner-card__logo wfc-partner-card__logo--kelowna">
+                                <i class="fa-solid fa-city"></i>
+                            </div>
+                            <h3 class="wfc-partner-card__name">City of Kelowna</h3>
+                            <p class="wfc-partner-card__desc">Local community partnership including fire departments, supporting camera deployment and on-the-ground coordination.</p>
+                        </a>
+                    </div>
+
+                    <!-- Opportunities CTA -->
+                    <div class="wfc-opportunities wfc-animate" id="opportunities">
+                        <div>
+                            <h3 class="wfc-opportunities__title">Become a Research Partner</h3>
+                            <p class="wfc-opportunities__text">We are actively seeking research partners who would like to join us on the ground floor of development for this project.</p>
+                        </div>
+                        <ul class="wfc-opportunities__list">
+                            <li>
+                                <i class="fa-solid fa-tower-broadcast"></i>
+                                Hosting wildfire-monitoring cameras in your community
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-comments"></i>
+                                Providing feedback on development and platform usability
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-flask"></i>
+                                Contributing to applied research which directly benefits your community
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ CONTACT SECTION ============ -->
+            <section class="wfc-section wfc-section--white" id="contact">
+                <div class="wfc-container">
+                    <div class="wfc-section__header--center wfc-animate">
+                        <div class="wfc-section__label"><i class="fa-solid fa-envelope"></i> Get in Touch</div>
+                        <h2 class="wfc-section__title">Contact Us</h2>
+                        <p class="wfc-section__subtitle">Interested in partnering with us or learning more about the WildfireCam Network? We'd love to hear from you.</p>
+                    </div>
+                    <div class="wfc-contact__grid">
+                        <div class="wfc-contact__info wfc-animate">
+                            <h3>Project Team</h3>
+                            <ul class="wfc-contact__details" id="contact-details">
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>wildfirecam@ubc.ca</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>250-807-8000</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>UBC Okanagan, 1177 Research Road, Kelowna, BC V1V 1V7</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <span><a href="https://ok.ubc.ca" target="_blank" rel="noopener noreferrer">ok.ubc.ca</a></span>
+                                </li>
+                            </ul>
+
+                            <div class="wfc-contact__team" id="team-details">
+                                <h4>Key Contacts</h4>
+                                <div class="wfc-team-member">
+                                    <div class="wfc-team-member__avatar">MB</div>
+                                    <div>
+                                        <div class="wfc-team-member__name">Dr. Mathieu Bourbonnais</div>
+                                        <div class="wfc-team-member__role">Lead Researcher — Fire Ecology and Remote Sensing Lab</div>
+                                    </div>
+                                </div>
+                                <div class="wfc-team-member">
+                                    <div class="wfc-team-member__avatar">PM</div>
+                                    <div>
+                                        <div class="wfc-team-member__name">Project Manager</div>
+                                        <div class="wfc-team-member__role">WildfireCam Network Operations</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wfc-animate">
+                            <form class="wfc-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+                                <div class="wfc-form__row">
+                                    <div class="wfc-form__group">
+                                        <label class="wfc-form__label" for="contact-first-name">First Name *</label>
+                                        <input type="text" class="wfc-form__input" id="contact-first-name" name="first_name" required>
+                                    </div>
+                                    <div class="wfc-form__group">
+                                        <label class="wfc-form__label" for="contact-last-name">Last Name *</label>
+                                        <input type="text" class="wfc-form__input" id="contact-last-name" name="last_name" required>
+                                    </div>
+                                </div>
+                                <div class="wfc-form__group">
+                                    <label class="wfc-form__label" for="contact-email">Email Address *</label>
+                                    <input type="email" class="wfc-form__input" id="contact-email" name="email" required>
+                                </div>
+                                <div class="wfc-form__group">
+                                    <label class="wfc-form__label" for="contact-org">Organization / Affiliation</label>
+                                    <input type="text" class="wfc-form__input" id="contact-org" name="organization">
+                                </div>
+                                <div class="wfc-form__group">
+                                    <label class="wfc-form__label" for="contact-interest">Area of Interest</label>
+                                    <select class="wfc-form__select" id="contact-interest" name="interest">
+                                        <option value="">— Select —</option>
+                                        <option value="hosting">Hosting cameras in my community</option>
+                                        <option value="research">Research collaboration</option>
+                                        <option value="feedback">Platform feedback</option>
+                                        <option value="media">Media inquiry</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="wfc-form__group">
+                                    <label class="wfc-form__label" for="contact-message">Message *</label>
+                                    <textarea class="wfc-form__textarea" id="contact-message" name="message" placeholder="Tell us how you'd like to be involved..." required></textarea>
+                                </div>
+                                <button type="submit" class="wfc-form__submit" id="contact-submit">
+                                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ FAQ SECTION ============ -->
+            <section class="wfc-section wfc-section--dark" id="faq">
+                <div class="wfc-container">
+                    <div class="wfc-section__header--center wfc-animate">
+                        <div class="wfc-section__label"><i class="fa-solid fa-circle-question"></i> Have Questions?</div>
+                        <h2 class="wfc-section__title">Frequently Asked Questions</h2>
+                        <p class="wfc-section__subtitle">Learn more about how WildfireCam works, its capabilities, and how it protects BC communities.</p>
+                    </div>
+                    <div class="wfc-faq__grid wfc-animate">
+                        <div class="wfc-faq-item active" id="faq-1">
+                            <button class="wfc-faq-item__question" onclick="toggleFaq(this)" aria-expanded="true">
+                                What is WildfireCam?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="wfc-faq-item__answer">
+                                <p>WildfireCam is a research project out of the Fire Ecology and Remote Sensing Lab led by Dr. Mathieu Bourbonnais at the University of British Columbia's Okanagan campus. Data, including images and videos, from cameras will be used to develop smoke-detection algorithms for wildfire detection, inform wildfire modelling in Canadian ecosystems, and inform research in post-fire landscape recovery.</p>
+                            </div>
+                        </div>
+                        <div class="wfc-faq-item" id="faq-2">
+                            <button class="wfc-faq-item__question" onclick="toggleFaq(this)" aria-expanded="false">
+                                How are cameras placed?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="wfc-faq-item__answer">
+                                <p>Analysis of potential camera sites are conducted, and optimal viewsheds are selected to monitor landscapes around critical infrastructure, culturally significant sites, and other at-risk areas. The optimal sites are locations which have tall infrastructure, access to power, and connectivity to ensure the best sightlines for the cameras and uninterrupted video/image uploads.</p>
+                            </div>
+                        </div>
+                        <div class="wfc-faq-item" id="faq-3">
+                            <button class="wfc-faq-item__question" onclick="toggleFaq(this)" aria-expanded="false">
+                                Will communities have access to the data?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="wfc-faq-item__answer">
+                                <p>At this time, only project supporters including the BC Wildfire Service, and fire departments in areas with cameras will have access to camera feeds through private login access.</p>
+                            </div>
+                        </div>
+                        <div class="wfc-faq-item" id="faq-4">
+                            <button class="wfc-faq-item__question" onclick="toggleFaq(this)" aria-expanded="false">
+                                How does this help fight wildfires?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="wfc-faq-item__answer">
+                                <p>Increased awareness means more informed decision making. While every fire may not require response, cameras allow provincial wildfire services to monitor and deploy resources as needed. Additionally, cameras which pick up fire starts show teams exactly where a fire is located. This means that wildfire responders don't need to 'chase smoke' to determine where the fire is, how large it is, and how best to respond.</p>
+                            </div>
+                        </div>
+                        <div class="wfc-faq-item" id="faq-5">
+                            <button class="wfc-faq-item__question" onclick="toggleFaq(this)" aria-expanded="false">
+                                How are privacy and data governance handled?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="wfc-faq-item__answer">
+                                <p>Privacy and data governance for the wildfire camera initiative are maintained in strict accordance with UBC Policy SC14 and Information Security Standards, ensuring full compliance with BC's FIPPA regulations. To maintain domestic oversight, all data is hosted exclusively within UBC Datacenters, precluding the routing of information through foreign servers. Furthermore, sensitive data is masked via edge-processing at the camera source. Access is managed through a Role-Based Access Control (RBAC) framework, limiting visibility to authorized personnel for the primary purpose of smoke and fire detection in remote regions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ TERRITORIAL ACKNOWLEDGEMENT ============ -->
+            <div class="wfc-acknowledgement">
+                <p>The University of British Columbia's Okanagan campus is situated on the traditional, ancestral, and unceded territory of the Syilx Okanagan Nation and their peoples. We acknowledge and respect the history, languages, and culture of the First Nations peoples in whose unceded territory we reside.</p>
+            </div>
+
+        </div>
+        <!-- End of Content Area -->
+    </div>
+
+    <!-- UBC Footer -->
+    <footer id="ubc7-footer" class="expand">
+        <div class="row-fluid expand" id="ubc7-unit-footer">
+            <div class="container">
+                <div class="span10" id="ubc7-unit-address">
+                    <div id="ubc7-address-unit-name">UBC WildfireCam Network</div>
+                    <div id="ubc7-address-campus">Okanagan Campus</div>
+                    <div id="ubc7-address-street">1177 Research Road</div>
+                    <div id="ubc7-address-location">
+                        <span id="ubc7-address-city">Kelowna</span>, <span id="ubc7-address-province" title="British Columbia">BC</span> <span id="ubc7-address-country">Canada</span> <span id="ubc7-address-postal">V1V 1V7</span>
+                    </div>
+                    <div id="ubc7-address-phone">Tel 250 807 8000</div>
+                    <div id="ubc7-address-email">E-mail wildfirecam@ubc.ca</div>
+                </div>
+                <div class="span2">
+                    <strong>Find us on</strong>
+                    <div id="ubc7-unit-social-icons">
+                        <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>&nbsp;
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>&nbsp;
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid expand ubc7-back-to-top">
+            <div class="container">
+                <div class="span2">
+                    <a href="#hero" title="Back to top">Back to top <div class="ubc7-arrow up-arrow grey"></div></a>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid expand" id="ubc7-global-footer">
+            <div class="container">
+                <div class="span5" id="ubc7-signature"><a href="//www.ubc.ca/" title="The University of British Columbia (UBC)">The University of British Columbia</a></div>
+                <div class="span7" id="ubc7-footer-menu">
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid expand" id="ubc7-minimal-footer">
+            <div class="container">
+                <div class="span12">
+                    <ul>
+                        <li><a href="//cdn.ubc.ca/clf/ref/emergency" title="Emergency Procedures">Emergency Procedures</a> <span class="divider">|</span></li>
+                        <li><a href="//cdn.ubc.ca/clf/ref/terms" title="Terms of Use">Terms of Use</a> <span class="divider">|</span></li>
+                        <li><a href="//cdn.ubc.ca/clf/ref/copyright" title="UBC Copyright">Copyright</a> <span class="divider">|</span></li>
+                        <li><a href="//cdn.ubc.ca/clf/ref/accessibility" title="Accessibility">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Placed javascript at the end for faster loading -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdn.ubc.ca/clf/7.0.5/js/ubc-clf.min.js"></script>
+
+    <script>
+    // ==============================
+    // WildfireCam Landing Page JS
+    // ==============================
+
+    // --- Scroll-reveal animations ---
+    document.addEventListener('DOMContentLoaded', function() {
+        var animElements = document.querySelectorAll('.wfc-animate');
+        
+        function checkVisible() {
+            animElements.forEach(function(el) {
+                var rect = el.getBoundingClientRect();
+                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (rect.top < windowHeight - 60) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        
+        checkVisible();
+        window.addEventListener('scroll', checkVisible, { passive: true });
+    });
+
+    // --- FAQ Accordion ---
+    function toggleFaq(btn) {
+        var item = btn.closest('.wfc-faq-item');
+        var wasActive = item.classList.contains('active');
+        
+        // Close all
+        document.querySelectorAll('.wfc-faq-item').forEach(function(el) {
+            el.classList.remove('active');
+            el.querySelector('.wfc-faq-item__question').setAttribute('aria-expanded', 'false');
+        });
+        
+        // Toggle current
+        if (!wasActive) {
+            item.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    // --- Smooth scroll for nav links ---
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // --- Counter animation for stats ---
+    function animateCounters() {
+        document.querySelectorAll('[data-count]').forEach(function(el) {
+            var target = parseInt(el.getAttribute('data-count'));
+            var current = 0;
+            var increment = target / 40;
+            var timer = setInterval(function() {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                el.textContent = Math.floor(current);
+            }, 40);
+        });
+    }
+
+    // Run counter when stats bar becomes visible
+    var statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                animateCounters();
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    var statsBar = document.getElementById('stats-bar');
+    if (statsBar) statsObserver.observe(statsBar);
+
+    // --- Contact form handler ---
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        var btn = document.getElementById('contact-submit');
+        btn.textContent = '✓ Message Sent!';
+        btn.style.background = 'linear-gradient(135deg, #1a6b3c, #2d8a4e)';
+        setTimeout(function() {
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+            btn.style.background = '';
+            event.target.reset();
+        }, 3000);
+    }
+    </script>
+</body>
+</html>

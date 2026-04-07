@@ -1,0 +1,1003 @@
+/* ============================================================
+   UBC WildfireCam Network — Custom Styles
+   Built on UBC CLF 7.0.5 | Full-Width Centered Template
+   ============================================================ */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+    --ubc-blue:       #002145;
+    --ubc-blue-light: #0055B7;
+    --ubc-grey:       #2F5D7C;
+    --ubc-grey-light: #97D4E9;
+
+    --fire-orange:    #E8602C;
+    --fire-amber:     #F5A623;
+    --fire-red:       #C0392B;
+    --forest-green:   #1A6B3C;
+    --smoke-grey:     #4A4A4A;
+
+    --surface-dark:   #0a1628;
+    --surface-mid:    #12233d;
+    --surface-card:   rgba(255,255,255,0.06);
+    --text-primary:   #ffffff;
+    --text-secondary: rgba(255,255,255,0.75);
+    --text-dark:      #1a1a1a;
+    --text-muted:     #5a6a7a;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+
+    --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+    --shadow-hover: 0 8px 48px rgba(0,0,0,0.14);
+    --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ---------- Base Overrides ---------- */
+body.wildfirecam {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.wildfirecam h1,
+body.wildfirecam h2,
+body.wildfirecam h3,
+body.wildfirecam h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- Hero Section ---------- */
+.wfc-hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--surface-dark) 0%, var(--ubc-blue) 50%, var(--ubc-grey) 100%);
+}
+
+.wfc-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.wfc-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.wfc-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,33,69,0.7) 0%,
+        rgba(0,33,69,0.5) 40%,
+        rgba(10,22,40,0.85) 100%
+    );
+    z-index: 1;
+}
+
+.wfc-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 80px 24px 60px;
+}
+
+.wfc-hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px;
+    color: var(--ubc-grey-light);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.wfc-hero__badge i {
+    font-size: 1rem;
+}
+
+.wfc-hero__title {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+}
+
+.wfc-hero__title span {
+    background: linear-gradient(135deg, var(--fire-orange), var(--fire-amber));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wfc-hero__subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    line-height: 1.65;
+    max-width: 700px;
+    margin: 0 auto 36px;
+    font-weight: 400;
+}
+
+.wfc-hero__actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wfc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.wfc-btn--primary {
+    background: linear-gradient(135deg, var(--fire-orange), var(--fire-amber));
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(232,96,44,0.35);
+}
+
+.wfc-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(232,96,44,0.5);
+    color: #fff;
+    text-decoration: none;
+}
+
+.wfc-btn--outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.wfc-btn--outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.6);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Scroll indicator */
+.wfc-hero__scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    animation: wfc-bounce 2s infinite;
+}
+
+@keyframes wfc-bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-8px); }
+    60% { transform: translateX(-50%) translateY(-4px); }
+}
+
+/* ---------- Sections ---------- */
+.wfc-section {
+    padding: 80px 0;
+}
+
+.wfc-section--dark {
+    background: var(--surface-dark);
+    color: var(--text-primary);
+}
+
+.wfc-section--light {
+    background: #f7f9fc;
+    color: var(--text-dark);
+}
+
+.wfc-section--white {
+    background: #ffffff;
+    color: var(--text-dark);
+}
+
+.wfc-section--gradient {
+    background: linear-gradient(180deg, var(--surface-dark) 0%, var(--surface-mid) 100%);
+    color: var(--text-primary);
+}
+
+.wfc-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.wfc-section__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--fire-orange);
+    margin-bottom: 12px;
+}
+
+.wfc-section__title {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.wfc-section--dark .wfc-section__title { color: #fff; }
+.wfc-section--light .wfc-section__title,
+.wfc-section--white .wfc-section__title { color: var(--ubc-blue); }
+
+.wfc-section__subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 720px;
+    margin-bottom: 40px;
+}
+
+.wfc-section--dark .wfc-section__subtitle { color: var(--text-secondary); }
+.wfc-section--light .wfc-section__subtitle,
+.wfc-section--white .wfc-section__subtitle { color: var(--text-muted); }
+
+/* Centered header variant */
+.wfc-section__header--center {
+    text-align: center;
+}
+
+.wfc-section__header--center .wfc-section__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------- About / Mission ---------- */
+.wfc-about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.wfc-about__image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    position: relative;
+}
+
+.wfc-about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.wfc-about__image:hover img {
+    transform: scale(1.03);
+}
+
+.wfc-about__image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(232,96,44,0.2);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.wfc-about__text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.wfc-about__text p:first-of-type {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+/* ---------- Benefits Cards ---------- */
+.wfc-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 10px;
+}
+
+.wfc-benefit-card {
+    background: var(--surface-card);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.wfc-benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--fire-orange), var(--fire-amber));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.wfc-benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232,96,44,0.25);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.wfc-benefit-card:hover::before {
+    opacity: 1;
+}
+
+.wfc-benefit-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(232,96,44,0.15), rgba(245,166,35,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: var(--fire-orange);
+}
+
+.wfc-benefit-card__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.wfc-benefit-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+/* ---------- Stats Bar ---------- */
+.wfc-stats {
+    padding: 0;
+    position: relative;
+    z-index: 3;
+    margin-top: -50px;
+}
+
+.wfc-stats__bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-xl);
+    padding: 32px 0;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+.wfc-stat {
+    text-align: center;
+    padding: 0 20px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.wfc-stat:last-child {
+    border-right: none;
+}
+
+.wfc-stat__number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--fire-orange), var(--fire-amber));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.wfc-stat__label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ---------- Quote Section ---------- */
+.wfc-quote {
+    text-align: center;
+    padding: 100px 0;
+    background: linear-gradient(160deg, var(--ubc-blue) 0%, var(--surface-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.wfc-quote::before {
+    content: '\201C';
+    position: absolute;
+    font-size: 20rem;
+    color: rgba(255,255,255,0.03);
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.wfc-quote__text {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 24px;
+    position: relative;
+}
+
+.wfc-quote__author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--fire-amber);
+}
+
+.wfc-quote__author span {
+    font-weight: 400;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 4px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Partners Section ---------- */
+.wfc-partners__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.wfc-partner-card {
+    background: #ffffff;
+    border: 1px solid #e8ecf0;
+    border-radius: var(--radius-lg);
+    padding: 40px 28px;
+    text-align: center;
+    transition: var(--transition);
+    text-decoration: none;
+    display: block;
+}
+
+.wfc-partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--ubc-blue-light);
+    text-decoration: none;
+}
+
+.wfc-partner-card__logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ubc-blue), var(--ubc-grey));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.wfc-partner-card__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ubc-blue);
+    margin-bottom: 8px;
+}
+
+.wfc-partner-card__desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ---------- Opportunities ---------- */
+.wfc-opportunities {
+    background: linear-gradient(135deg, var(--ubc-blue), var(--ubc-grey));
+    border-radius: var(--radius-xl);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.wfc-opportunities__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.wfc-opportunities__text {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+}
+
+.wfc-opportunities__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.wfc-opportunities__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+.wfc-opportunities__list li:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateX(4px);
+}
+
+.wfc-opportunities__list li i {
+    color: var(--fire-amber);
+    font-size: 1.1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* ---------- Contact Section ---------- */
+.wfc-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.wfc-contact__info {
+    padding-top: 10px;
+}
+
+.wfc-contact__info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ubc-blue);
+    margin-bottom: 20px;
+}
+
+.wfc-contact__details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wfc-contact__details li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.wfc-contact__details li i {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, rgba(0,85,183,0.1), rgba(47,93,124,0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ubc-blue-light);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.wfc-contact__team {
+    margin-top: 28px;
+}
+
+.wfc-contact__team h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ubc-blue);
+    margin-bottom: 16px;
+}
+
+.wfc-team-member {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eef1f4;
+}
+
+.wfc-team-member:last-child {
+    border-bottom: none;
+}
+
+.wfc-team-member__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ubc-blue), var(--ubc-grey));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.wfc-team-member__name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.wfc-team-member__role {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* Form */
+.wfc-form {
+    background: #fff;
+    border: 1px solid #e8ecf0;
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--shadow-card);
+}
+
+.wfc-form__group {
+    margin-bottom: 20px;
+}
+
+.wfc-form__label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.wfc-form__input,
+.wfc-form__textarea,
+.wfc-form__select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background: #fafbfc;
+    transition: var(--transition);
+    box-sizing: border-box;
+}
+
+.wfc-form__input:focus,
+.wfc-form__textarea:focus,
+.wfc-form__select:focus {
+    outline: none;
+    border-color: var(--ubc-blue-light);
+    box-shadow: 0 0 0 3px rgba(0,85,183,0.1);
+    background: #fff;
+}
+
+.wfc-form__textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.wfc-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.wfc-form__submit {
+    width: 100%;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--ubc-blue), var(--ubc-blue-light));
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.wfc-form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0,33,69,0.3);
+}
+
+/* ---------- FAQ Section ---------- */
+.wfc-faq__grid {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wfc-faq-item {
+    background: var(--surface-card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.wfc-faq-item.active {
+    border-color: rgba(232,96,44,0.3);
+}
+
+.wfc-faq-item__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+}
+
+.wfc-faq-item__question:hover {
+    color: var(--fire-amber);
+}
+
+.wfc-faq-item__question i {
+    color: var(--fire-orange);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.wfc-faq-item.active .wfc-faq-item__question i {
+    transform: rotate(180deg);
+}
+
+.wfc-faq-item__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.wfc-faq-item.active .wfc-faq-item__answer {
+    max-height: 400px;
+    padding: 0 24px 20px;
+}
+
+.wfc-faq-item__answer p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ---------- Territorial Acknowledgement ---------- */
+.wfc-acknowledgement {
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--surface-dark);
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.wfc-acknowledgement p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* ---------- Scroll Animations ---------- */
+.wfc-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.wfc-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+    .wfc-about__grid,
+    .wfc-contact__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .wfc-benefits__grid,
+    .wfc-partners__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wfc-opportunities {
+        grid-template-columns: 1fr;
+        padding: 36px;
+    }
+
+    .wfc-stats__bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .wfc-stat {
+        border-right: none;
+        padding: 16px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wfc-hero {
+        min-height: 70vh;
+    }
+
+    .wfc-hero__content {
+        padding: 60px 16px 50px;
+    }
+
+    .wfc-section {
+        padding: 50px 0;
+    }
+
+    .wfc-benefits__grid,
+    .wfc-partners__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wfc-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .wfc-stats__bar {
+        grid-template-columns: 1fr 1fr;
+        border-radius: var(--radius-lg);
+        padding: 20px 0;
+    }
+
+    .wfc-opportunities {
+        padding: 28px;
+    }
+
+    .wfc-quote {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .wfc-stats__bar {
+        grid-template-columns: 1fr;
+    }
+
+    .wfc-hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wfc-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ---------- Fix CLF overrides ---------- */
+body.wildfirecam .full-width-container {
+    padding: 0;
+}
+
+body.wildfirecam .content.expand {
+    padding: 0;
+}
+
+body.wildfirecam .breadcrumb.expand {
+    display: none;
+}
+
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Glow accent for partner card logos */
+.wfc-partner-card__logo--bcws {
+    background: linear-gradient(135deg, #1a6b3c, #2d8a4e);
+}
+
+.wfc-partner-card__logo--ubco {
+    background: linear-gradient(135deg, var(--ubc-blue), var(--ubc-blue-light));
+}
+
+.wfc-partner-card__logo--kelowna {
+    background: linear-gradient(135deg, #8b1a1a, #c0392b);
+}
+
+/* Fix CLF full width styles to not conflict */
+body.wildfirecam .row-fluid.expand {
+    overflow: visible;
+}
